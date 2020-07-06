@@ -8,7 +8,8 @@ class Reddit extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(`https://www.reddit.com/r/reactjs.json`).then(res => {
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=Brussels&appid=f6211bc24c258c57f7a7fba887afdd17`).then(res => {
+      const posts = res.data.data.children.map(obj => obj.data);
       const posts = res.data.data.children.map(obj => obj.data);
       this.setState({ posts });
     });
@@ -20,8 +21,7 @@ class Reddit extends React.Component {
         <h1>/r/reactjs</h1>
         <ul>
           {this.state.posts.map(post => {
-              //Domain: <a href={'https://' + post.domain}>https://{post.domain}</a>
-            return <li key={post.id}><a href={post.url} target="_blank">{post.title}</a></li>;
+            return <li key={post.id}>{post.title}</li>;
           })}
         </ul>
       </div>

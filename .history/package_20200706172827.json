@@ -1,6 +1,6 @@
 {
-  "name": "tutorial-react",
-  "homepage": "https://gisnetzEU.github.io/tutorial-react",
+  "name": "tutorial",
+  "homepage": "https://gisnetzEU.github.io/tutorial",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

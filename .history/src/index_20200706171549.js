@@ -20,8 +20,8 @@ class Reddit extends React.Component {
         <h1>/r/reactjs</h1>
         <ul>
           {this.state.posts.map(post => {
-              //Domain: <a href={'https://' + post.domain}>https://{post.domain}</a>
-            return <li key={post.id}><a href={post.url} target="_blank">{post.title}</a></li>;
+              //<li><a href={post.url} >key={post.id}>{post.title}</li></a>;
+            return <li key={post.id}><a href={post.url}>{post.title}</a>, Domain: <a href={post.domain}>{post.domain}</a></li>;
           })}
         </ul>
       </div>
